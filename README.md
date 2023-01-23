@@ -2,7 +2,7 @@
 Arduino Source-code of my Final Year Thesis with Setup
 
 
-```
+```ruby
 #include <WiFi.h>
 #include <WiFiClient.h>
 #include <HTTPClient.h>
