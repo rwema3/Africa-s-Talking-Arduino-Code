@@ -77,6 +77,7 @@ void loop()
 {
   connectingWiFiSetup();//Connecting to Wifi
   currentMillis = millis();
+  if (currentMillis - previousMillis > interval) 
   {
     
     pulse1Sec = pulseCount;
@@ -91,6 +92,7 @@ void loop()
     flowLitres = (flowRate / 60);
  
     // Add the millilitres passed in this second to the cumulative total
+    totalMilliLitres += flowMilliLitres;
     availableLitter = currentLiter/1000;
     
     // Print the flow rate for this second in litres / minute
