@@ -77,7 +77,6 @@ void loop()
 {
   connectingWiFiSetup();//Connecting to Wifi
   currentMillis = millis();
-  if (currentMillis - previousMillis > interval) 
   {
     
     pulse1Sec = pulseCount;
