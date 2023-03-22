@@ -99,6 +99,7 @@ void loop()
     
     // Print the flow rate for this second in litres / minute
     lcd.setCursor(1,1);
+    lcd.print(" Litres:");
   
         // Print the cumulative total of litres flowed since starting
     //----------------------------Codes for Relay-------------------------------------------------------
