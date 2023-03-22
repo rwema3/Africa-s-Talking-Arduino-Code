@@ -94,7 +94,6 @@ void loop()
     // Add the millilitres passed in this second to the cumulative total
     totalMilliLitres += flowMilliLitres;
     totalLitres += flowLitres;
-    currentLiter= litres- totalLitres;
     availableLitter = currentLiter/1000;
     
     // Print the flow rate for this second in litres / minute
