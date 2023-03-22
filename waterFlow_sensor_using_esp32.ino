@@ -77,6 +77,24 @@ void loop()
 {
   connectingWiFiSetup();//Connecting to Wifi
   currentMillis = millis();
+  {
+    
+    pulse1Sec = pulseCount;
+    pulseCount = 0;
+ 
+    // Because this loop may not complete in exactly 1 second intervals we calculate
+    flowRate = ((1000.0 / (millis() - previousMillis)) * pulse1Sec) / calibrationFactor;
+    previousMillis = millis();
+ 
+    // Divide the flow rate in litres/minute by 60 to determine how many litres have
+    flowMilliLitres = (flowRate / 60) * 1000;
+    flowLitres = (flowRate / 60);
+ 
+    // Add the millilitres passed in this second to the cumulative total
+    availableLitter = currentLiter/1000;
+    
+    // Print the flow rate for this second in litres / minute
+  
         // Print the cumulative total of litres flowed since starting
     //----------------------------Codes for Relay-------------------------------------------------------
     if(currentLiter<=0.0)
