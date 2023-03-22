@@ -77,20 +77,7 @@ void loop()
 {
   connectingWiFiSetup();//Connecting to Wifi
   currentMillis = millis();
-  ------------------------------End of codes of Relay --------------------------------------------
-    lcd.setCursor(3,1);
-    lcd.print("Litre:");
-    lcd.print(currentLiter);
-    updatingToDb();
-     // Print tab space
- 
-
-     
-  }
-  lcd.clear();
-}
-void connectingWiFiSetup()
-{
+  
     
   delay(1000);   
   
