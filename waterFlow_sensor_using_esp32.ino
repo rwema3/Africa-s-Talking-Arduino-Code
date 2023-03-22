@@ -103,7 +103,8 @@ void loop()
     lcd.println(currentLiter);
     lcd.clear();
     Serial.print(" Litres:");
-  
+    Serial.println(currentLiter);
+ 
         // Print the cumulative total of litres flowed since starting
     //----------------------------Codes for Relay-------------------------------------------------------
     if(currentLiter<=0.0)
