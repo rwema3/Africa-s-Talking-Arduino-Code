@@ -77,7 +77,20 @@ void loop()
 {
   connectingWiFiSetup();//Connecting to Wifi
   currentMillis = millis();
-  ------------------------------End of codes of Relay --------------------------------------------
+        // Print the cumulative total of litres flowed since starting
+    //----------------------------Codes for Relay-------------------------------------------------------
+    if(currentLiter<=0.0)
+    {
+       lcd.setCursor(3,0); 
+       pinMode(Relay_Enable,OUTPUT);
+      digitalWrite(Relay_Enable,HIGH);
+        pinMode(Relay_Enable,INPUT_PULLUP);
+      lcd.println("OFF");
+      currentLiter=0.0;
+      Serial.println("Your Smart water meter is off");
+    }
+
+//------------------------------End of codes of Relay --------------------------------------------
     lcd.setCursor(3,1);
     lcd.print("Litre:");
     lcd.print(currentLiter);
