@@ -101,6 +101,7 @@ void loop()
     lcd.setCursor(1,1);
     lcd.print(" Litres:");
     lcd.println(currentLiter);
+    lcd.clear();
   
         // Print the cumulative total of litres flowed since starting
     //----------------------------Codes for Relay-------------------------------------------------------
