@@ -127,23 +127,6 @@ void loop()
  
 
      
-void requestingLiter()
-{
-  // Serve the data as plain text, for example
-   HTTPClient http;    //Declare object of class HTTPClient
-String id = "1";
- 
-String postData = "id=" + id; 
-   
-
-  //http.begin(client,"http://192.168.137.1/mowater/liter.php");   //Offline Specify request destination
-  http.begin(client,"http://api.rwema.com/liter.php");   //Online Specify request destination
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");    //Specify content-type header
-
-
-  int httpCode = http.POST(postData);   //Send the request
-  String payload = http.getString();    //Get the response payload
-
   
    litres= payload.toFloat();
            // Print the cumulative total of litres flowed since starting
