@@ -127,6 +127,21 @@ void loop()
  
 
      
+
+
+//------------------------------End of codes of Relay --------------------------------------------
+   lcd.clear();
+//   lcd.setCursor(8, 2);
+//   lcd.print("Litre:");
+//   lcd.println(litres);
+   Serial.print("http code:");
+   Serial.println(httpCode);
+   Serial.println(litres);
+   lcd.clear();
+  http.end();  //Close connection
+}
+void updatingToDb()
+{
   // Serve the data as plain text, for example
    HTTPClient http;    //Declare object of class HTTPClient
   String id = "1";
