@@ -127,6 +127,27 @@ void loop()
  
 
      
+//  lcd.setCursor(3,1);
+//    lcd.print(".");
+    Serial.print(".");
+    delay(250);
+    //#################################################
+  }
+
+  //when connected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//  lcd.setCursor(3,0);
+//  lcd.println("");
+//  lcd.print("Connected to Network/SSID ");
+//  lcd.println(ssid);
+//  lcd.print("IP address: ");
+//  lcd.println(WiFi.localIP());  //IP address assigned to your ESP
+  Serial.print("Connected to Network/SSID ");
+  Serial.println(ssid);
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());  //IP address assigned to your ESP
+  requestingLiter();
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
 void requestingLiter()
 {
   // Serve the data as plain text, for example
