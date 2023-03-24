@@ -127,13 +127,7 @@ void loop()
  
 
      
-  }
-  lcd.clear();
-}
-void connectingWiFiSetup()
-{
-    
-  delay(1000);   
+  
   
   // Open serial communications and wait for port to open:
 Serial.begin(9600);
