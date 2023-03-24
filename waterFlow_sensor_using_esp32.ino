@@ -127,20 +127,6 @@ void loop()
  
 
      
-  
-   litres= payload.toFloat();
-           // Print the cumulative total of litres flowed since starting
-    //----------------------------Codes for Relay-------------------------------------------------------
-    if(litres<=0.0)
-    {
-//      pinMode(Relay_Enable,OUTPUT);
-//      digitalWrite(Relay_Enable,HIGH);
-//        pinMode(Relay_Enable,INPUT_PULLUP);
-      digitalWrite(Relay_Enable,LOW);
-      litres=0.0;
-      lcd.setCursor(4,1);
-      lcd.println("Your Smart water meter is off");
-    }
 
 
 //------------------------------End of codes of Relay --------------------------------------------
