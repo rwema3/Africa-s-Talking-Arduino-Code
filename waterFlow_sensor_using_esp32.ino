@@ -127,6 +127,25 @@ void loop()
  
 
      
+  
+  
+  // Open serial communications and wait for port to open:
+Serial.begin(9600);
+while (!Serial) {
+; // wait for serial port to connect. Needed for native USB port only
+}
+  WiFi.mode(WIFI_OFF);        //Prevents reconnection issue (taking too long to connect)
+  delay(1000);
+  WiFi.mode(WIFI_STA);        //This line hides the viewing of ESP as wifi hotspot
+  
+  //Connect to your WiFi router#######################
+  WiFi.begin(ssid, password); 
+//  lcd.setCursor(3,0);    
+//  lcd.println("");
+//  lcd.print("Connecting to ");
+//  lcd.print(ssid);
+  // Wait for connection##############################
+  while (WiFi.status() != WL_CONNECTED) {
 //  lcd.setCursor(3,1);
 //    lcd.print(".");
     Serial.print(".");
