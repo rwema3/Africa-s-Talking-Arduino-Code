@@ -28,14 +28,7 @@ float totalLitres;
 //------------------------------------End 1 For Water flow Sensor----------------------------------------
 //int R1 = 12;  // Pin 3 on Arduino
 //----------^--------^--------Codes for Relays------------------------------------------------------------
-WiFiClient client;
-void IRAM_ATTR pulseCounter()
-{
-  pulseCount++;
-}
- 
-void setup()
-{
+
   Serial.begin(9600);
 //  connectingWiFiSetup();//Connecting to Wifi
  // pinMode(Relay_Enable,INPUT_PULLUP);
