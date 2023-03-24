@@ -127,15 +127,3 @@ void loop()
  
 
      
-  // Serve the data as plain text, for example
-   HTTPClient http;    //Declare object of class HTTPClient
-  String id = "1";
-  
-float liter = Serial.parseFloat();
-String postData = "id=" + id + "&liter=" + currentLiter; 
-   //http.begin(client,"http://192.168.137.1/mowater/update.php");   //Offline Specify request destination
-  http.begin(client,"http://api.rwema.com/update.php");   //Online Specify request destination
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");    //Specify content-type header
-  int httpCode = http.POST(postData);   //Send the request
-  http.end();  //Close connection
-}
